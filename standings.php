@@ -39,9 +39,9 @@ $result = $conn->query(
         t_teams ON t_transfers.ID_TEAM = t_teams.ID
     INNER JOIN
         d_countries d_countries_team ON t_teams.ID_COUNTRY = d_countries_team.ID
-    WHERE
-        t_standings.EVENT_DATE >= '2024-01-01'
-        AND t_standings.EVENT_DATE <= '2024-12-31'
+    -- WHERE
+    --     t_standings.EVENT_DATE >= '2024-01-01'
+    --     AND t_standings.EVENT_DATE <= '2024-12-31'
     GROUP BY
         t_standings.ID_DRIVER,
         d_countries_driver.COUNTRY,

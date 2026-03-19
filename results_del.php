@@ -11,7 +11,7 @@ try {
     $stmt = $conn->prepare($sql);
     
     // Привязываем значение параметра :id из GET-запроса
-    $stmt->bindValue(':id', $_GET['id']);
+    $stmt->bindValue(':id', $_POST['id']);
     
     // Выполняем запрос на удаление
     $stmt->execute();

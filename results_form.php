@@ -2,7 +2,7 @@
     <div class="card-header">Добавить запись в таблицу</div>
     <div class="card-body text-dark">
         <!-- Форма для добавления новой записи в базу данных -->
-        <form method="post" action="results_ins.php" enctype="multipart/form-data">
+        <form method="post" action="results_ins.php">
             <!-- Первая строка формы: дата гонки, Гран‑при, пилот -->
             <div class="row g-3 mb-4">
                 <div class="col-md-4">
@@ -148,25 +148,27 @@
     <div class="card-header">Удалить запись из таблицы</div>
     <div class="card-body text-dark">
         <!-- Форма для удаления записи по ID -->
-        <div class="d-flex gap-2 align-items-center">
-            <div class="flex-grow-1">
-                <input
-                    type="number"
-                    id="deleteId"
-                    name="id"
-                    class="form-control"
-                    placeholder="Введите ID записи для удаления"
-                    min="1"
-                    required
+        <form method="post" action="results_del.php">
+            <div class="d-flex gap-2 align-items-center">
+                <div class="flex-grow-1">
+                    <input
+                        type="number"
+                        id="deleteId"
+                        name="id"
+                        class="form-control"
+                        placeholder="Введите ID записи для удаления"
+                        min="1"
+                        required
+                    >
+                </div>
+                <button
+                    type="submit"
+                    class="btn btn-danger"
+                    style="width: 120px"
                 >
+                    Удалить
+                </button>
             </div>
-            <button
-                type="submit"
-                class="btn btn-danger"
-                style="width: 120px"
-            >
-                Удалить
-            </button>
-        </div>
+        </form>
     </div>
 </div>
